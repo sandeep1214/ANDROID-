@@ -1,10 +1,10 @@
 # 1. Introduction
 This project presents a relational SQLite database that simulates energy usage, water consumption, and environmental monitoring across a smart campus.<br>
 The database was fully generated using Python in Google Colab to ensure:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Realistic and reproducible data<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Data integrity through foreign and compound keys<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Compliance with assignment instructions<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;No personal or sensitive information<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;* Realistic and reproducible data<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;* Data integrity through foreign and compound keys<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;* Compliance with assignment instructions<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;* No personal or sensitive information<br><br>
 *&nbsp;&nbsp;The resulting database file is: smart_campus_energy.db
 
 # 2. Data Generation Process
