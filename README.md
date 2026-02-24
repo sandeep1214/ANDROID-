@@ -1,10 +1,10 @@
 # 1. Introduction
 This project presents a relational SQLite database that simulates energy usage, water consumption, and environmental monitoring across a smart campus.<br>
 The database was fully generated using Python in Google Colab to ensure:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;Realistic and reproducible data<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;Data integrity through foreign and compound keys<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;Compliance with assignment instructions<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;No personal or sensitive information<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Realistic and reproducible data<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Data integrity through foreign and compound keys<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Compliance with assignment instructions<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;No personal or sensitive information<br><br>
 &nbsp;&nbsp;The resulting database file is: smart_campus_energy.db
 
 # 2. Data Generation Process
@@ -36,7 +36,7 @@ The database was generated programmatically using Python in Google Colab, follow
 &nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;&nbsp;occupancy_level (ordinal)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;&nbsp;air_quality_index (interval)<br/>
 *&nbsp;&nbsp;Uses a compound primary key (building_id, log_date) to prevent duplicates<br/>
-*&nbsp;&nbsp;UsageLogs.csv <br>
+*&nbsp;&nbsp;UsageLogs.csv <br><br>
 *&nbsp;&nbsp;Python randomization ensured that values were realistic and consistent for all data types (nominal, ordinal, interval, ratio).
 
 # 3. Database Schema
