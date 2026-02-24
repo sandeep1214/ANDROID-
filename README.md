@@ -41,32 +41,35 @@ The database was generated programmatically using Python in Google Colab, follow
 
 # 3. Database Schema
 ## 3.1 Buildings Table
-Column	Data Type	Notes
-building_id	INTEGER	Primary Key
-building_name	TEXT	Unique identifier
-building_type	TEXT	Nominal: Academic, Residential, Laboratory, Administrative
-department	TEXT	Nominal: Department responsible
-building_area_sqm	REAL	Ratio: 0+ m², meaningful zero
-sustainability_rating	TEXT	Ordinal: Poor → Excellent
+| Column                | Data Type | Notes                                                       |
+|-----------------------|-----------|-------------------------------------------------------------|
+| building_id           | INTEGER   | Primary Key                                                 |
+| building_name         | TEXT      | Unique identifier                                           |
+| building_type         | TEXT      | Nominal: Academic, Residential, Laboratory, Administrative |
+| department            | TEXT      | Nominal: Department responsible                             |
+| building_area_sqm     | REAL      | Ratio: 0+ m², meaningful zero                               |
+| sustainability_rating | TEXT      | Ordinal: Poor → Excellent                                   |
 
 
 
 ## 3.2 EnergyUsage Table
-Column	Data Type	Notes
-usage_id	INTEGER	Primary Key
-building_id	INTEGER	Foreign Key → Buildings.building_id
-energy_source	TEXT	Nominal: Grid, Solar, Wind
-energy_consumption_kwh	REAL	Ratio: 0+ kWh
-water_usage_liters	REAL	Ratio: 0+ liters
+| Column                 | Data Type | Notes                                         |
+|------------------------|-----------|-----------------------------------------------|
+| usage_id               | INTEGER   | Primary Key                                   |
+| building_id            | INTEGER   | Foreign Key → Buildings.building_id           |
+| energy_source          | TEXT      | Nominal: Grid, Solar, Wind                    |
+| energy_consumption_kwh | REAL      | Ratio: 0+ kWh                                 |
+| water_usage_liters     | REAL      | Ratio: 0+ liters                              |
 
 ## 3.3 UsageLogs Table
-Column	Data Type	Notes
-building_id	INTEGER	Foreign Key → Buildings.building_id
-log_date	TEXT	Date of record
-temperature_celsius	REAL	Interval: 0°C is arbitrary
-occupancy_level	TEXT	Ordinal: Low < Medium < High
-air_quality_index	INTEGER	Interval: relative AQI scale
-Primary Key	building_id + log_date	Ensures unique daily log per building
+| Column              | Data Type | Notes                                   |
+|---------------------|-----------|-------------------------------------------|
+| building_id         | INTEGER   | Foreign Key → Buildings.building_id      |
+| log_date            | TEXT      | Date of record                           |
+| temperature_celsius | REAL      | Interval: 0°C is arbitrary               |
+| occupancy_level     | TEXT      | Ordinal: Low < Medium < High             |
+| air_quality_index   | INTEGER   | Interval: relative AQI scale             |
+| Primary Key         | building_id + log_date | Ensures unique daily log per building |
 ### Relationships:
 *&nbsp;&nbsp;EnergyUsage.building_id → Buildings.building_id<br/>
 *&nbsp;&nbsp;UsageLogs.building_id → Buildings.building_id
