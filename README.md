@@ -1,23 +1,23 @@
 # 1. Introduction
 This project presents a relational SQLite database that simulates energy usage, water consumption, and environmental monitoring across a smart campus.<br/>
 The database was fully generated using Python in Google Colab to ensure:<br/>
-*Realistic and reproducible data<br/>
-*Data integrity through foreign and compound keys<br/>
-*Compliance with assignment instructions<br/>
-*No personal or sensitive information<br/>
-*The resulting database file is: smart_campus_energy.db
+<br>*Realistic and reproducible data<br/>
+<br>*Data integrity through foreign and compound keys<br/>
+<br>*Compliance with assignment instructions<br/>
+<br>*No personal or sensitive information<br/>
+<br>*The resulting database file is: smart_campus_energy.db
 
 # 2. Data Generation Process
 The database was generated programmatically using Python in Google Colab, following these steps:
 ## 2.1 Buildings Table
 *Contains static information for 40 campus buildings<br/>
 *Columns:<br/>
-1.building_type (nominal)<br/>
-2.department (nominal)<br/>
-3.building_area_sqm (ratio)<br/>
-4.sustainability_rating (ordinal)<br/>
-*Random selection from predefined lists ensured realistic distribution.<br/>
-*building_area_sqm uses 500–5000 m² to simulate real building sizes.<br/>
+<br><br>1.building_type (nominal)<br/>
+<br><br>2.department (nominal)<br/>
+<br><br>3.building_area_sqm (ratio)<br/>
+<br><br>4.sustainability_rating (ordinal)<br/>
+<br>*Random selection from predefined lists ensured realistic distribution.<br/>
+<br>*building_area_sqm uses 500–5000 m² to simulate real building sizes.<br/>
 *Buildings.csv
 ## 2.2 EnergyUsage Table
 *Stores energy and water consumption per building<br/>
