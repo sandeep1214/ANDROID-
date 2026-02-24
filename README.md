@@ -5,7 +5,7 @@ The database was fully generated using Python in Google Colab to ensure:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Data integrity through foreign and compound keys<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Compliance with assignment instructions<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;No personal or sensitive information<br><br>
-&nbsp;&nbsp;The resulting database file is: smart_campus_energy.db
+*&nbsp;&nbsp;The resulting database file is: smart_campus_energy.db
 
 # 2. Data Generation Process
 The database was generated programmatically using Python in Google Colab, following these steps:
