@@ -1,42 +1,42 @@
 # 1. Introduction
-This project presents a relational SQLite database that simulates energy usage, water consumption, and environmental monitoring across a smart campus.<b/>
-The database was fully generated using Python in Google Colab to ensure:<b/>
-Realistic and reproducible data<b/>
-Data integrity through foreign and compound keys<b/>
-Compliance with assignment instructions<b/>
-No personal or sensitive information<b/>
-The resulting database file is: smart_campus_energy.db <b/>
+This project presents a relational SQLite database that simulates energy usage, water consumption, and environmental monitoring across a smart campus.<br/>
+The database was fully generated using Python in Google Colab to ensure:<br/>
+Realistic and reproducible data<br/>
+Data integrity through foreign and compound keys<br/>
+Compliance with assignment instructions<br/>
+No personal or sensitive information<br/>
+The resulting database file is: smart_campus_energy.db <br/>
 
 # 2. Data Generation Process
 The database was generated programmatically using Python in Google Colab, following these steps:
 ## 2.1 Buildings Table
-Contains static information for 40 campus buildings<b/>
-Columns:<b/>
-obuilding_type (nominal)<b/>
-odepartment (nominal)<b/>
-obuilding_area_sqm (ratio)<b/>
-osustainability_rating (ordinal)<b/>
-Random selection from predefined lists ensured realistic distribution.<b/>
-building_area_sqm uses 500–5000 m² to simulate real building sizes.<b/>
-Buildings.csv<b/>
+Contains static information for 40 campus buildings<br/>
+Columns:<br/>
+obuilding_type (nominal)<br/>
+odepartment (nominal)<br/>
+obuilding_area_sqm (ratio)<br/>
+osustainability_rating (ordinal)<br/>
+Random selection from predefined lists ensured realistic distribution.<br/>
+building_area_sqm uses 500–5000 m² to simulate real building sizes.<br/>
+Buildings.csv
 ## 2.2 EnergyUsage Table
-Stores energy and water consumption per building<b/>
-Columns:<b/>
-oenergy_source (nominal)<b/>
-oenergy_consumption_kwh (ratio)<b/>
-owater_usage_liters (ratio)<b/>
-Each building has one usage record<b/>
-Relational integrity maintained with building_id as a foreign key<b/>
-EnergyUsage.csv <b/>
+Stores energy and water consumption per building<br/>
+Columns:<br/>
+oenergy_source (nominal)<br/>
+oenergy_consumption_kwh (ratio)<br/>
+owater_usage_liters (ratio)<br/>
+Each building has one usage record<br/>
+Relational integrity maintained with building_id as a foreign key<br/>
+EnergyUsage.csv 
 ## 2.3 UsageLogs Table
-Daily environmental logs for 30 days per building<b/>
-40 buildings × 30 days = 1,200+ rows<b/>
-Columns:<b/>
-otemperature_celsius (interval)<b/>
-ooccupancy_level (ordinal)<b/>
-oair_quality_index (interval)<b/>
-Uses a compound primary key (building_id, log_date) to prevent duplicates<b/>
-UsageLogs.csv <b/>
+Daily environmental logs for 30 days per building<br/>
+40 buildings × 30 days = 1,200+ rows<br/>
+Columns:<br/>
+otemperature_celsius (interval)<br/>
+ooccupancy_level (ordinal)<br/>
+oair_quality_index (interval)<br/>
+Uses a compound primary key (building_id, log_date) to prevent duplicates<br/>
+UsageLogs.csv <br/>
 Python randomization ensured that values were realistic and consistent for all data types (nominal, ordinal, interval, ratio).
 
 # 3. Database Schema
@@ -68,36 +68,36 @@ occupancy_level	TEXT	Ordinal: Low < Medium < High
 air_quality_index	INTEGER	Interval: relative AQI scale
 Primary Key	building_id + log_date	Ensures unique daily log per building
 ### Relationships:
-EnergyUsage.building_id → Buildings.building_id<b/>
+EnergyUsage.building_id → Buildings.building_id<br/>
 UsageLogs.building_id → Buildings.building_id
 
 # 4. Justification for Separate Tables
-Buildings Table: Holds static attributes; avoids duplication in other tables.<b/>
-EnergyUsage Table: Stores energy and water consumption separately for clarity and normalization.<b/>
-UsageLogs Table: Stores daily monitoring data with a compound key to prevent duplicate entries.<b/>
+Buildings Table: Holds static attributes; avoids duplication in other tables.<br/>
+EnergyUsage Table: Stores energy and water consumption separately for clarity and normalization.<br/>
+UsageLogs Table: Stores daily monitoring data with a compound key to prevent duplicate entries.<br/>
 
 ### Constraints enforce:
-Nominal/ordinal categories via CHECK constraints<b/>
-Non-negative ratio/interval values<b/>
-Referential integrity via foreign keys<b/>
+Nominal/ordinal categories via CHECK constraints<br/>
+Non-negative ratio/interval values<br/>
+Referential integrity via foreign keys<br/>
 This structure supports realistic, normalized, and relationally consistent data.
 
 # 5. Ethical and Data Privacy Considerations
-All data is synthetic, with no personal or sensitive information.<b/>
-Building identifiers (Building_1, Building_2, etc.) are simulated.<b/>
-Randomized values simulate real-world energy usage while maintaining privacy.<b/>
+All data is synthetic, with no personal or sensitive information.<br/>
+Building identifiers (Building_1, Building_2, etc.) are simulated.<br/>
+Randomized values simulate real-world energy usage while maintaining privacy.<br/>
 This ensures compliance with data protection and ethical guidelines.
 
 # 6. Conclusion
-The Smart Campus Energy Usage & Sustainability database:<b/>
-Meets all assignment requirements: ≥7 columns, ≥1,000 rows, all 4 data types<b/>
-Implements foreign keys and a compound key for relational integrity<b/>
-Provides realistic, randomized synthetic data suitable for analysis<b/>
-Fully reproducible using Python in Google Colab<b/>
-Database download from Colab:<b/>
-from google.colab import files<b/>
+The Smart Campus Energy Usage & Sustainability database:<br/>
+Meets all assignment requirements: ≥7 columns, ≥1,000 rows, all 4 data types<br/>
+Implements foreign keys and a compound key for relational integrity<br/>
+Provides realistic, randomized synthetic data suitable for analysis<br/>
+Fully reproducible using Python in Google Colab<br/>
+Database download from Colab:<br/>
+from google.colab import files<br/>
 files.download("smart_campus_energy.db")
 
 # 7. Appendix 
-The Python code used to generate the database is included in the Colab notebook.<b/>
+The Python code used to generate the database is included in the Colab notebook.<br/>
 smart_campus_energy.ipynb
